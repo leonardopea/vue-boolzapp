@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.colgiallo{
+    background-color: yellow;
+    
+}
+
+
+.colgialloverde{
+    background-color: rgb(150, 150, 50);
+    
+}
+
+
+
+.colrosso{
+    background-color: rgb(255, 60, 0);
+    height: 100px;
+}
+
+.colblu{
+    background-color: rgb(89, 61, 165);
+    height: 100px;
+}
+
+.colverde{
+    background-color: rgb(37, 158, 33);
+    height: 100px;
+}
+
+
+.colazzurra{
+    background-color: rgb(73, 154, 201);
+    height: 100px;
+}
+
+
+.container_chat{
+    height: 800px;
+    background-color: beige;
+}
+
+
+/* modifica immagine avatar */
+.avatar{
+    width: 30%;
+    border-radius: 30px;
+}
