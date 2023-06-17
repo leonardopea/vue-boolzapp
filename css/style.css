@@ -6,6 +6,7 @@
 
 body{
     font-size: 14px;
+    background-image:linear-gradient(to bottom, #009688 0px, #009688,15vh, #D9DBD4 15vh, #D9DBD4 100%);
 }
 
 .colgiallo{
@@ -54,6 +55,7 @@ body{
 .avatar{
     width: 20%;
     border-radius: 30px;
+    float: left;
 }
 
 .avatar_dx{
@@ -64,4 +66,60 @@ body{
 
 .container_header{
     background-color: #EAEAEA;
+}
+
+.back_blu{
+    background-color: #8EDAFC;
+}
+
+/* row_bell */
+
+
+.fa-bell-slash{
+    
+    margin: 10px 0px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px 8px;
+    
+
+}
+
+
+/* barra di ricerca */
+
+.row_search{
+    background-color: #F6F6F6;
+    
+}
+
+
+.search_bar,.fa-search{
+    width: 100%;
+    margin: 10px 0;
+   
+
+}
+
+
+/* avatar chat */
+
+.avatar_chat{
+    border-radius: 30px;
+    float: left;
+    width: 100%;
+}
+
+.row_avatar{
+    padding-top: 10px ;
+    background-color: white;
+}
+
+.orario, .subtitle{
+    font-size: 10px;
+    color: gray;
+}
+
+.row_final{
+    padding-bottom: 50px;
 }
