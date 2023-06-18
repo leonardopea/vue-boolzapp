@@ -25,8 +25,8 @@
                     <div class="row container_header mt-4 pt-2 pb-2">
                         <div class="col d-flex align-items-center">    <!--   AVATAR E NOME--> 
 
-                            <img class="avatar" src="./img/avatar_io.jpg" alt=""> <!--  inserire immagine-->
-                            <span class="pl-2">Sofia</span> <!-- inserire nome -->
+                            <img class="avatar" :src="user.avatar" :alt="user.name"> <!--  inserire immagine-->
+                            <span class="pl-2">{{user.name}}</span> <!-- inserire nome -->
                         </div>
                     
                         <div class="col d-flex justify-content-end align-items-center">     <!--  TOOLS --> 
@@ -55,7 +55,8 @@
                             <i class="fa fa-search search_item" style="color: rgb(90, 87, 87);"></i>
                         </div>
                         <div class="col">
-                            <input class="search_bar" type="text" placeholder="Crea o inizia una nuova chat">
+                            <input class="search_bar" type="text" placeholder="Crea o inizia una nuova chat"
+                            v-model="SearchContacts" @keyup="filter">
                         </div>
                     </div>
                    
@@ -63,12 +64,12 @@
 
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_1.jpg" alt="Michele"> 
+                            <img class="avatar_chat" :src="contacts[0].avatar" :alt="contacts[0].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Michele</span> 
+                            <span class="">{{contacts[0].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -80,12 +81,12 @@
 
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_2.jpg" alt="Fabio"> 
+                            <img class="avatar_chat" :src="contacts[1].avatar" :alt="contacts[1].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Fabio</span> 
+                            <span class="">{{contacts[1].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -97,12 +98,12 @@
 
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_3.jpg" alt="Samuele"> 
+                            <img class="avatar_chat" :src="contacts[2].avatar" :alt="contacts[2].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Samuele</span> 
+                            <span class="">{{contacts[2].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -115,12 +116,12 @@
 
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_4.jpg" alt="Alessandro B."> 
+                            <img class="avatar_chat" :src="contacts[3].avatar" :alt="contacts[3].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Alessandro B.</span> 
+                            <span class="">{{contacts[3].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -132,12 +133,12 @@
 
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_5.jpg" alt="Alessandro L."> 
+                            <img class="avatar_chat" :src="contacts[4].avatar" :alt="contacts[4].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Alessandro L.</span> 
+                            <span class="">{{contacts[4].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -146,17 +147,15 @@
                             <p class="orario">12:00</p>
                         </div>
                     </div>
-                    
 
-                    
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_6.jpg" alt="Claudia "> 
+                            <img class="avatar_chat" :src="contacts[5].avatar" :alt="contacts[5].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Claudia</span> 
+                            <span class="">{{contacts[5].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -166,16 +165,14 @@
                         </div>
                     </div>
 
-                    
-                    
                     <div class="row row_avatar">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_7.jpg" alt="Federico "> 
+                            <img class="avatar_chat" :src="contacts[6].avatar" :alt="contacts[6].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Federico</span> 
+                            <span class="">{{contacts[6].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -184,15 +181,16 @@
                             <p class="orario">12:00</p>
                         </div>
                     </div>
-                    
+
+
                     <div class="row row_avatar row_final">
                         <div class="col">    <!--   AVATAR E NOME--> 
-                            <img class="avatar_chat" src="./img/avatar_8.jpg" alt="Davide "> 
+                            <img class="avatar_chat" :src="contacts[7].avatar" :alt="contacts[7].name"> 
                         </div>
 
                         <div class="col-8">
 
-                            <span class="">Davide</span> 
+                            <span class="">{{contacts[7].name}}</span> 
                             <p class=" subtitle">Ultimo messaggio inviato</p>
                         </div>
                         
@@ -201,7 +199,15 @@
                             <p class="orario">12:00</p>
                         </div>
                     </div>
+
+                   
+
                     
+                   
+
+                  
+
+                      
                     
 
 
