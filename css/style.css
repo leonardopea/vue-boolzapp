@@ -9,63 +9,21 @@ body{
     background-image:linear-gradient(to bottom, #009688 0px, #009688,15vh, #D9DBD4 15vh, #D9DBD4 100%);
 }
 
-.colgiallo{
-    background-color: yellow;
-    
-}
 
-
-.colgialloverde{
-    background-color: rgb(150, 150, 50);
-    
-}
-
-
-
-.colrosso{
-    background-color: rgb(255, 60, 0);
-    height: 100px;
-}
-
-.colblu{
-    background-color: rgb(89, 61, 165);
-    height: 100px;
-    
-}
-
-.colverde{
-    background-color: rgb(37, 158, 33);
-    height: 100px;
-}
-
-
-.colazzurra{
-    background-color: rgb(73, 154, 201);
-    height: 100px;
-}
-
-
-.container_chat{
-    height: 800px;
-    background-color: beige;
-}
 
 
 /* modifica immagine avatar */
 .avatar{
-    width: 20%;
+    height: 40px;
     border-radius: 30px;
-    float: left;
+   
 }
 
-.avatar_dx{
-    width: 13%;
-    border-radius: 30px;
-    float: left;
-}
+
 
 .container_header{
     background-color: #EAEAEA;
+    
 }
 
 .back_blu{
@@ -94,7 +52,7 @@ body{
 }
 
 
-.search_bar,.fa-search{
+.search_bar,.search_item{
     width: 100%;
     margin: 10px 0;
    
@@ -106,7 +64,6 @@ body{
 
 .avatar_chat{
     border-radius: 30px;
-    float: left;
     width: 100%;
 }
 
@@ -122,4 +79,57 @@ body{
 
 .row_final{
     padding-bottom: 50px;
+}
+
+
+
+/* PARTE DX */
+
+
+.border_left{
+    border-left: 1px solid rgb(184, 177, 177);
+}
+
+
+
+/* chat */
+
+
+.container_chat{
+    height: 565px;
+    background-color: beige;
+}
+
+
+.message{
+    background-color: #D5F9BA;
+    border-radius: 10px;
+    
+
+}
+
+
+.message_white{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.orario_chat{
+    font-size: 8px;
+    color: gray;
+    text-align: end;
+}
+
+/* row write a message */
+
+.row_writetext{
+    background-color: #F3EEEA;
+    height: 80px;
+}
+
+.message_bar{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
 }

@@ -52,7 +52,7 @@
 
                     <div class="row row_search d-flex align-items-center">
                         <div class="col-1">
-                            <i class="fa fa-search" style="color: rgb(90, 87, 87);"></i>
+                            <i class="fa fa-search search_item" style="color: rgb(90, 87, 87);"></i>
                         </div>
                         <div class="col">
                             <input class="search_bar" type="text" placeholder="Crea o inizia una nuova chat">
@@ -222,72 +222,107 @@
 
 
 
+
+
+
+                <!--  LAVORO SULLA PARTE DX--> 
         
-                <div class="col colgialloverde">   <!--  LAVORO SULLA PARTE DX--> 
+                <div class="col">   
 
+                   
+                    <div class="row container_header  border_left mt-4 pt-2 pb-2 ">
+                        <div class="col-1 d-flex align-items-center">    <!--   AVATAR E NOME--> 
 
-                    <div class="container">      <!--  PROFILO PERSONALE--> 
-                        <div class="row mt-3 mb-3 pt-3 pb-3">
-                            <div class="col d-flex align-items-center">    <!--   AVATAR E NOME--> 
-                                
-                                <img class="avatar_dx" src="./img/avatar_1.jpg" alt=""> <!--  inserire immagine-->
-                                
-                                <span>Michele</span> <!-- inserire nome -->
-                                <p>Ultimo accesso oggi alle 12:00 </p>
-                            </div>
-            
-                            <div class="col colrosso">     <!--  TOOLS --> 
+                            <img class="avatar" src="./img/avatar_1.jpg" alt="Michele"> <!--  inserire immagine-->
+                        </div>
+                        
+                        <div class="col pl-3">
+                            <span class=" pt-1">Michele</span> 
+                            <div class=" subtitle">Ultimo accesso oggi alle 12:00</div>
 
-                                <div class="colverde"></div>
-                                <span class="colverde"></span>
-                                <span class="colverde"></span>
+                        </div>
+                            
+                        
+                    
+                        <div class="col d-flex justify-content-end align-items-center">     <!--  TOOLS --> 
 
-                            </div>
+                            <i class="fa-solid fa-search fa-xl mr-3" style="color: #c0c0c0;"></i>
+                            <i class="fa-solid fa-paperclip fa-xl mr-3" style="color: #c0c0c0"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fa-xl mr-3" style="color: #c0c0c0;"></i>
                         </div>
                     </div>
+                    
 
 
 
-                    <div class="container container_chat">   <!-- CHAT  -->
-                        <div class="row">
-                            <div class="col">
 
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-3 colverde">
 
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-end">
-                                        <div class="col-3 colverde">
+                    <!-- CHAT  -->
 
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-start">
-                                        <div class="col-3 colverde">
+                    <div class="row container_chat">
+                        <div class="col">
 
-                                        </div>
-                                    </div>
+                            <div class="row justify-content-end mt-5 mr-3">
+                                <div class="col-5 message ">
+                                    <p>Hai portato a spasso il cane?</p>
+                                    <p class="orario_chat">15:30</p>
+
                                 </div>
-
                             </div>
-                        </div>
-                    </div>
 
+                            <div class="row justify-content-end mt-2 mr-3">
+                                <div class="col-5 message ">
+                                    <p>Ricordati di stendere i panni</p>
+                                    <p class="orario_chat">15:50</p>
 
+                                </div>
+                            </div>
 
-                    <div class="container">   <!-- MESSAGGI -->
-                        <div class="row">
-                            <div class="col">
+                            <div class="row justify-content-start mt-2 ml-3">
+                                <div class="col-5 message_white ">
+                                    <p>Tutto fatto!</p>
+                                    <p class="orario_chat">16:15</p>
 
+                                </div>
+                            </div>
+                            
+                        
+
+                        
                                 
-                                <div class="colverde"></div>
-                                <span class="colverde"></span>
-                                <span class="colverde"></span>
 
-                            </div>
                         </div>
                     </div>
+
+
+                    <!-- parte finale scrivi un messaggio -->
+                    
+                    <div class="row row_writetext d-flex align-items-center">
+                        <div class="col d-flex justify-content-end">
+                            <i class="fa-regular fa-face-smile fa-xl" style="color: #4f4e4e;"></i>
+                        
+                        </div>
+
+                        <div class="col-10">
+                            <input class=" message_bar" type="text" placeholder="Scrivi un messaggio">
+                        
+                        </div>
+
+                        <div class="col d-flex justify-content-start">
+                            <i class="fa-solid fa-microphone fa-xl" style="color: #4f4e4e;"></i>
+                        
+                        </div>
+                    </div>
+
+
+                    
+                     
+                
+
+
+
+                    
+            
 
 
 
@@ -311,5 +346,3 @@
 </html>
 
 
-
-<!--  -->
