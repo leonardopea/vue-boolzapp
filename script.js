@@ -115,7 +115,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_5.jpg',
+                    avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -191,5 +191,17 @@ createApp({
                 }
             });
         },
+        getLastData(index){
+            if (this.contacts[index].messages.length > 0){
+                return this.contacts[index].messages[this.contacts[index].messages.length -1].date;
+            }
+        },
+
+        getLastMessage(index){
+            if (this.contacts[index].messages.length > 0){
+                return this.contacts[index].messages[this.contacts[index].messages.length -1].message;
+            }
+
+        }
     }
 }).mount('#app');
