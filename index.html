@@ -56,13 +56,13 @@
                         </div>
                         <div class="col">
                             <input class="search_bar" type="text" placeholder="Crea o inizia una nuova chat"
-                            v-model="SearchContacts" @keyup="filter">
+                            v-model="searchContacts" @keyup="filter">
                         </div>
                     </div>
                    
 
 
-                    <div class="row row_avatar" v-for="(contact,index) in contacts">
+                    <div class="row row_avatar" v-for="(contact,index) in contacts" v-show="contact.visible">
                         <div class="col" >    <!--   AVATAR E NOME--> 
                             <img class="avatar_chat" :src="contact.avatar" :alt="contact.name"> 
                         </div>
@@ -107,7 +107,7 @@
                         
                         <div class="col pl-3">
                             <span class=" pt-1">Michele</span> 
-                            <div class=" subtitle">Ultimo accesso oggi alle 12:00</div>
+                            <div class=" subtitle">Ultimo accesso oggi alle</div>
 
                         </div>
                             

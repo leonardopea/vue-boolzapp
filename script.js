@@ -176,7 +176,7 @@ createApp({
                 }
             ],
 
-            SearchContacts: ''
+            searchContacts: ''
 
 
         }
@@ -184,7 +184,7 @@ createApp({
     methods: {
         filter(){
             this.contacts.forEach((element) => {
-                if (element.name.toLowerCase().includes(this.SearchContacts.toLowerCase())) {
+                if (element.name.toLowerCase().includes(this.searchContacts.toLowerCase())) {
                 element.visible = true;
                 } else {
                 element.visible = false;
