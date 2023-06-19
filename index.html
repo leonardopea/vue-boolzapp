@@ -131,7 +131,7 @@
                     <div class="row container_chat">
                         <div class="col">
 
-                            <div class=" row mt-5 ml-2 mr-2" v-for="(message,index) in contacts[contactActive].messages" :class="sentORreceived(index)">
+                            <div class=" row mt-5 ml-2 mr-2 pos_sticky" v-for="(message,index) in contacts[contactActive].messages" :class="sentORreceived(index)">
                                 
                                 <p class="col">{{message.message}}</p>
                                 <p class=" col-2 orario_chat">{{message.date}}</p>

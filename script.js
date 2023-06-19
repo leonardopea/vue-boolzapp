@@ -182,6 +182,8 @@ createApp({
 
             contactActive: 0,
 
+            
+
             messageActive: {
                 index: false,
                 show:false
@@ -244,12 +246,13 @@ createApp({
 
         // ricevo un messaggio 
 
-        setTimeout(() => {
-            this.contacts[this.contactActive].messages.push({
-                message: 'ok',
-                status: 'received'
-            });
-        }, 1000);
+            setTimeout(() => {
+                this.contacts[this.contactActive].messages.push({
+                    message: 'ciao',
+                    date: '19/06/2023 16:10:08',
+                    status: 'received',
+                });
+            }, 1000);
 
         },
 
