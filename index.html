@@ -131,34 +131,14 @@
                     <div class="row container_chat">
                         <div class="col">
 
-                            <div class="row justify-content-end mt-5 mr-3">
+                            <div class="row justify-content-end mt-5 mr-3" v-for="(message,index) in contacts[contactActive].messages">
                                 <div class="col-5 message ">
-                                    <p>Hai portato a spasso il cane?</p>
-                                    <p class="orario_chat">15:30</p>
+                                    <p>{{message.message}}</p>
+                                    <p class="orario_chat">{{message.date}}</p>
 
                                 </div>
                             </div>
-
-                            <div class="row justify-content-end mt-2 mr-3">
-                                <div class="col-5 message ">
-                                    <p>Ricordati di stendere i panni</p>
-                                    <p class="orario_chat">15:50</p>
-
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-start mt-2 ml-3">
-                                <div class="col-5 message_white ">
-                                    <p>Tutto fatto!</p>
-                                    <p class="orario_chat">16:15</p>
-
-                                </div>
-                            </div>
-                            
-                        
-
-                        
-                                
+         
 
                         </div>
                     </div>
