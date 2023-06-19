@@ -106,7 +106,7 @@ body{
 
 
 .message{
-    background-color: #D5F9BA;
+  
     border-radius: 10px;
     
 
@@ -122,7 +122,33 @@ body{
     font-size: 8px;
     color: gray;
     text-align: end;
+
 }
+
+
+.received{
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    border-radius: 10px;
+    
+    
+
+}
+
+.sent{
+    background-color: #D5F9BA;
+    display: flex;
+    justify-content: end;
+    border-radius: 10px;
+ 
+    
+
+
+}
+
+
+
 
 /* row write a message */
 

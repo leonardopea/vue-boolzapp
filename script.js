@@ -179,7 +179,9 @@ createApp({
             searchContacts: '',
 
             nuovomessaggio: '',
+
             contactActive: 0,
+
             messageActive: {
                 index: false,
                 show:false
@@ -219,9 +221,41 @@ createApp({
                 this.messageActive.index = false;
             }
             this.contactActive = index;
-        }
+        },
+
+        sentORreceived(index){
+            let x = this.contacts[this.contactActive].messages[index].status;
+            return x;
+        },
+
+
+        // invio messaggio nuovo
+
+        invio(){
+            let oggetto = {
+                message: this.nuovomessaggio,
+                status: 'sent',
+            }
+            this.contacts[this.contactActive].messages.push(oggetto);
+
+            this.nuovomessaggio='';
+        
+
+
+        // ricevo un messaggio 
+
+        setTimeout(() => {
+            this.contacts[this.contactActive].messages.push({
+                message: 'ok',
+                status: 'received'
+            });
+        }, 1000);
+
+        },
 
 
 
     }
 }).mount('#app');
+
+
