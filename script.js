@@ -233,12 +233,12 @@ createApp({
 
         // invio messaggio nuovo
 
-        invio(){
+        invio(index){
             let oggetto = {
                 message: this.nuovomessaggio,
                 status: 'sent',
             }
-            this.contacts[this.contactActive].messages.push(oggetto);
+            this.contacts[index].messages.push(oggetto);
 
             this.nuovomessaggio='';
         
@@ -247,7 +247,7 @@ createApp({
         // ricevo un messaggio 
 
             setTimeout(() => {
-                this.contacts[this.contactActive].messages.push({
+                this.contacts[index].messages.push({
                     message: 'ciao',
                     date: '19/06/2023 16:10:08',
                     status: 'received',

@@ -77,6 +77,8 @@
                         <div class="col d-flex justify-content-end">     <!--  ORARIO -->
                             <p class="orario">{{getLastData(index)}}</p>
                         </div>
+
+                        
                     </div>
 
                     <div class="row row_final">
@@ -131,10 +133,11 @@
                     <div class="row container_chat">
                         <div class="col">
 
-                            <div class=" row mt-5 ml-2 mr-2 pos_sticky" v-for="(message,index) in contacts[contactActive].messages" :class="sentORreceived(index)">
+                            <div class=" row mt-4 ml-2 mr-2 pos_sticky" v-for="(message,index) in contacts[contactActive].messages" :class="sentORreceived(index)">
                                 
                                 <p class="col">{{message.message}}</p>
                                 <p class=" col-2 orario_chat">{{message.date}}</p>
+                                <i class="fa-solid fa-chevron-down mr-2" style="color: #c0c0c0;"></i>
 
                             
                             </div>
@@ -153,7 +156,7 @@
                         </div>
 
                         <div class="col-10">
-                            <input class=" message_bar" type="text" placeholder="Scrivi un messaggio" @keyup.enter="invio" v-model="nuovomessaggio">
+                            <input class=" message_bar" type="text" placeholder="Scrivi un messaggio" @keyup.enter="invio(contactActive)" v-model="nuovomessaggio">
                         
                         </div>
 
