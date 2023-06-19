@@ -176,12 +176,20 @@ createApp({
                 }
             ],
 
-            searchContacts: ''
+            searchContacts: '',
+
+            nuovomessaggio: '',
+            contactActive: 0,
+            messageActive: {
+                index: false,
+                show:false
+            },
 
 
         }
     },
     methods: {
+        // filtro i nomi della chat per lettere contenute
         filter(){
             this.contacts.forEach((element) => {
                 if (element.name.toLowerCase().includes(this.searchContacts.toLowerCase())) {
@@ -191,17 +199,29 @@ createApp({
                 }
             });
         },
+        // seleziono ultima data di messaggio
         getLastData(index){
             if (this.contacts[index].messages.length > 0){
                 return this.contacts[index].messages[this.contacts[index].messages.length -1].date;
             }
         },
-
+        // seleziono ultimo messaggio e lo inserisco nel sottotitolo 
         getLastMessage(index){
             if (this.contacts[index].messages.length > 0){
                 return this.contacts[index].messages[this.contacts[index].messages.length -1].message;
             }
 
+        },
+        // rendo visibili i messaggi di un contatto
+        conversazioneAttiva(index){
+            if(this.messageActive.index !== false) {
+                this.messageActive.show = false;
+                this.messageActive.index = false;
+            }
+            this.contactActive = index;
         }
+
+
+
     }
 }).mount('#app');

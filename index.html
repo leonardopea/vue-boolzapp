@@ -62,7 +62,7 @@
                    
 
 
-                    <div class="row row_avatar" v-for="(contact,index) in contacts" v-show="contact.visible">
+                    <div class="row row_avatar" v-for="(contact,index) in contacts"  v-show="contact.visible" @click="conversazioneAttiva(index)">
                         <div class="col" >    <!--   AVATAR E NOME--> 
                             <img class="avatar_chat" :src="contact.avatar" :alt="contact.name"> 
                         </div>
@@ -102,12 +102,12 @@
                     <div class="row container_header  border_left mt-4 pt-2 pb-2 ">
                         <div class="col-1 d-flex align-items-center">    <!--   AVATAR E NOME--> 
 
-                            <img class="avatar" src="./img/avatar_1.jpg" alt="Michele"> <!--  inserire immagine-->
+                            <img class="avatar" :src="contacts[contactActive].avatar" :alt="contacts[contactActive].name"> <!--  inserire immagine-->
                         </div>
                         
                         <div class="col pl-3">
-                            <span class=" pt-1">Michele</span> 
-                            <div class=" subtitle">Ultimo accesso oggi alle</div>
+                            <span class=" pt-1">{{contacts[contactActive].name}}</span> 
+                            <div class=" subtitle">Ultimo accesso oggi alle {{getLastData(contactActive)}}</div>
 
                         </div>
                             

@@ -69,6 +69,10 @@ body{
 .row_avatar{
     padding-top: 10px ;
     background-color: white;
+    cursor: pointer;
+}
+.row_avatar:hover{
+    background-color: rgb(234, 227, 227);
 }
 
 .orario, .subtitle{
